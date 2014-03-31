@@ -28,6 +28,98 @@
 
 //****************************************************************************************************
 //
+// .. BLOCK
+//
+//****************************************************************************************************
+.block {
+  @include prefixes(box-sizing, border-box);
+  position: absolute;
+  z-index: 999;
+  height: 400px;
+  background-color: #fff;
+}
+
+
+
+//****************************************************************************************************
+//
+// .. SECTION
+//
+//****************************************************************************************************
+.section {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  &:not(:last-child) {
+    border-bottom: 5px solid #fff;
+  }
+  
+  &.__full {
+    min-height: 700px; 
+  }
+  
+  &.__home {
+    background-image: url(/assets/images/layer-01.jpg);
+  } 
+  &.__intro {
+    background-image: url(/assets/images/layer-02.jpg);
+    .block {
+      @include prefixes(transform, translate(-50%, -50%));
+      top: 0;
+      left: 50%;
+      width: 500px;
+      padding: 20px;
+    } 
+  }
+  &.__characteristics {
+    background-image: url(/assets/images/layer-03.jpg); 
+    .block {
+      @include prefixes(transform, translate(-50%, -50%));
+      top: 0;
+      left: 50%;
+      width: 500px;
+      padding: 20px;
+    } 
+  }
+  &.__equipment {
+    background-image: url(/assets/images/layer-04.jpg); 
+    .block {
+      @include prefixes(transform, translate(-50%, -50%));
+      top: 0;
+      left: 50%;
+      width: 500px;
+      padding: 20px;
+    } 
+  }
+  &.__location {
+    background-color: gray;
+    height: 450px;
+    .block {
+      @include prefixes(transform, translate(-50%, -50%));
+      top: 50%;
+      right: 0;
+      width: 500px;
+      padding: 20px;
+    } 
+  }
+  &.__feedback {
+    background-image: url(/assets/images/layer-05.jpg); 
+    .block {
+      @include prefixes(transform, translate(-50%, -50%));
+      top: 50%;
+      left: 50%;
+      width: 500px;
+      padding: 20px;
+    } 
+  }
+}
+
+
+
+//****************************************************************************************************
+//
 // .. FOOTER
 //
 //****************************************************************************************************
