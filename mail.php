@@ -1,8 +1,8 @@
 <?php
 
   $send = $_REQUEST['send'];
-  $to = 'feedback@grape.me';
-  $cc = 'info@oskolsky.com';
+  $to = 'info@oskolsky.com';
+  $cc = 'settimomarzo@gmail.com';
   
   if (isset($send)) {
     $data = $_REQUEST['data'];
