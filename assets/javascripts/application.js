@@ -184,11 +184,7 @@ $(function() {
   // .. RESIZE
   //
   //****************************************************************************************************
-  $(window).smartresize(function() {
-
-    $('#header').stickyHeader();
-
-  });
+  $(window).smartresize(function() {});
   
 });
 
@@ -199,8 +195,4 @@ $(function() {
 // .. LOAD
 //
 //****************************************************************************************************
-$(window).load(function() {
-
-  $('#header').stickyHeader();
-
-});
+$(window).load(function() {});

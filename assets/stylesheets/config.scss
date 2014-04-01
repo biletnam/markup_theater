@@ -105,10 +105,15 @@ $base-font-weight: 400;
 $base-line-height-list: (1.8rem, 1.8rem, 1.8rem);
 
 //
+// .. Fonts
+//
+$font-400: "RomanovskyWebRegular", Helvetica, Arial, sans-serif;
+$font-700: "RomanovskyWebBold", Helvetica, Arial, sans-serif;
+
+//
 // .. Headings
 //
-$h-font-family-400: "RomanovskyWebRegular", Helvetica, Arial, sans-serif;
-$h-font-family-700: "RomanovskyWebBold", Helvetica, Arial, sans-serif;
+$h-font-family: $font-400;
 
 $h1-font-size-list: (4.8rem, 4.8rem, 4.8rem);
 $h2-font-size-list: (2.4rem, 2.4rem, 2.4rem);
@@ -147,10 +152,10 @@ $focus: true; // .. true / false
 //
 // .. Links
 //
-$link-color: #2980b9;
-$link-color-hover: #ccc;
-$link-color-active: darken($link-color-hover, 10%);
-$link-style: un;        // .. nn / uu / un / nu
+$link-color: $major-color;
+$link-color-hover: $major-color;
+$link-color-active: darken($major-color, 10%);
+$link-style: nn;        // .. nn / uu / un / nu
 $link-style-pseudo: uu; // .. nn / uu / un
 
 //

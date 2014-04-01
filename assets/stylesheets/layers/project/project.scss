@@ -11,6 +11,13 @@
 //
 //****************************************************************************************************
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+  text-align: center;
   @include media-query(desktop) {
     &.__sticky {
       position: fixed;
@@ -18,12 +25,45 @@
       right: 0;
       left: 0;
       z-index: 1000;
-      background: $base-bg;
+      background: transparent;
       box-shadow: .1em .1em .3em rgba(0, 0, 0, .25);
     }
   }
 }
 
+
+
+//****************************************************************************************************
+//
+// .. LOGO
+//
+//****************************************************************************************************
+.logo {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: $base-bg;
+  text-align: center;
+}
+  .logo_img {
+    border-right:  1px solid $major-color;
+    border-bottom: 1px solid $major-color;
+    border-left:   1px solid $major-color;
+    vertical-align: top;
+  }
+  .logo_phone {
+    color: $major-color;
+    font-size: 1.8rem;
+    font-family: $font-400;
+    padding: 10px 0;
+  }
+  .logo_feedback {
+    background-color: #efeddc;  
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
 
 
 //****************************************************************************************************
@@ -49,8 +89,8 @@
   }
     .block_t {
       display: inline-block;
-      padding: 0 2rem;
-      height: 4rem;
+      padding: 0 20px;
+      height: 40px;
       border-radius: 4px;
       background-color: $major-color;
       color: #fff;
@@ -137,7 +177,7 @@
 // .. HR
 //
 .hr {
-  padding: 2rem 0 3rem;
+  padding: 20px 0 30px;
   height: 20px;
   background: url(/assets/images/hr.png) center no-repeat;
 }

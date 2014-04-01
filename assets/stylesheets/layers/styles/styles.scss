@@ -86,12 +86,13 @@ img {font-style: italic;}
 //
 //****************************************************************************************************
 h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
-  font-family: $h-font-family-700;
+  font-family: $h-font-family;
   &.format-money > i,
    .format-money > i {font-size: 85%;}
 }
-h3, .gamma {
-  font-family: $h-font-family-400;
+
+h1, .alpha {
+  font-family: $font-700;
 }
 
 @if $grid == "fixed" or $grid == "fluid" {@include headers(1);}
