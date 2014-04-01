@@ -11,7 +11,7 @@
     $mail -> To($to);
     $mail -> Cc($cc);
     $mail -> Subject('Обратная связь с сайта Театральный дом');
-    $mail -> Body('Имя: '.$data['name']."\n".'Телефон: '.$data['phone']."\n".'Удобное время: '.$data['time']);
+    $mail -> Body('Имя: '.$data['name']."\n".'Телефон: '.$data['phone']."\n".'Удобное время: '.$data['period']);
     $mail -> Priority(3);
     $mail -> Send();
     echo $mail -> Get();
