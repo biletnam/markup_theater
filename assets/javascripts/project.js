@@ -19,33 +19,47 @@ $(function() {
       barHeight: 1,
       completeAnimation: "grow",
       minimumTime: 100
-      // onComplete: function() {
-      //   $('.screen__1').find('.screen_cnt').fadeIn();        
-      // }
   });  
   
   //
   // .. Send email
   //
   $('#feedback-form-submit').click(function() {
-    $.ajax({
-      type: 'POST',
-      url:  '/mail.php',
-      data: $('#feedback-form').serialize(),
-      success: function(response) {
-        $.arcticmodal({
-          type: 'ajax',
-          url: '/data/dialogs/send_success.html'
-        });
-        $('#feedback-form')[0].reset();
-      },
-      error: function() {
-        $.arcticmodal({
-          type: 'ajax',
-          url: '/data/dialogs/send_error.html'
-        });
+    
+    var valid = true;
+    
+    $('#feedback-form').find('.form-el.__tx[data-valid]').each(function() {
+      console.log($.trim($(this).val()).length);
+      
+      if ($.trim($(this).val()).length <= 0) {
+        valid = false;
+        $(this).attr('data-valid', 'false');
+      } else {
+        $(this).attr('data-valid', 'true');        
       }
     });
+        
+    if (valid != false) {
+      $.ajax({
+        type: 'POST',
+        url:  '/mail.php',
+        data: $('#feedback-form').serialize(),
+        success: function(response) {
+          $.arcticmodal({
+            type: 'ajax',
+            url: '/data/dialogs/send_success.html'
+          });
+          $('#feedback-form')[0].reset();
+        },
+        error: function() {
+          $.arcticmodal({
+            type: 'ajax',
+            url: '/data/dialogs/send_error.html'
+          });
+        }
+      });
+    }
+    
     return false;
   });  
 

@@ -10,7 +10,7 @@ $.arcticmodal('setDefault', {
   overlay: {
     css: {
       backgroundColor: '#000',
-      opacity: 0.66
+      opacity: 0.9
     }
   },
   openEffect: {
@@ -94,33 +94,24 @@ function formatMoney() {
 // .. Open dialog
 //
 $(document).on('click touchstart', '[data-dialog="open"]', function() {
-  if (window.matchMedia) {
-    if (matchMedia('all and (min-width: ' + config.matchMedia.desktop.minWidth + 'px)').matches) {
-      var url = $(this).data('url');
-    
-      $.arcticmodal('close');
+  var url = $(this).data('url');
 
-      $.arcticmodal({
-        type: 'ajax',
-        url: url
-      });
-      
-      return false;
-    }
-  }
+  $.arcticmodal('close');
+
+  $.arcticmodal({
+    type: 'ajax',
+    url: url
+  });
+  
+  return false;
 });
 
 //
 // .. Close dialog
 //
 $(document).on('click touchstart', '[data-dialog="close"]', function() {
-  if (window.matchMedia) {
-    if (matchMedia('all and (min-width: ' + config.matchMedia.desktop.minWidth + 'px)').matches) {
-      $.arcticmodal('close');
-
-      return false;
-    }
-  }
+  $.arcticmodal('close');
+  return false;
 });
 
 
