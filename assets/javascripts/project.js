@@ -8,6 +8,33 @@ $(function() {
   setSectionHeight();
 
   $('.form-el.__phone').mask('+7 (999) 999-9999');
+  
+  //
+  // .. Send email
+  //
+  $('#feedback-form-submit').click(function() {
+    $.ajax({
+      type: 'POST',
+      url:  '/mail.php',
+      data: $('#feedback-form').serialize(),
+      success: function(response) {
+        alert('Ок');
+        // $.arcticmodal({
+        //   type: 'ajax',
+        //   url: '/views/dialogs/_send_success.html'
+        // });
+        $('#feedback-form')[0].reset();
+      },
+      error: function() {
+        alert('Error');
+        // $.arcticmodal({
+        //   type: 'ajax',
+        //   url: '/views/dialogs/_send_error.html'
+        // });
+      }
+    });
+    return false;
+  });  
 
   
   

@@ -70,7 +70,10 @@
               %h2.block_t Расположение
             %hr.hr.m-t_1.m-b_2
             .cnt
-              %p Престижное расположение Театрального Дома свидетельствует об&nbsp;особом статусе его владельцев. В&nbsp;десяти минутах пешком&nbsp;&mdash; Кремль, Храм Христа Спасителя, ул. Старый Арбат, Пушкинская площадь. Из&nbsp;окон открывается прекрасный вид на&nbsp;зелёный сквер Мерзляковского переулка и&nbsp;Поварскую улицу, где преобладает малоэтажная застройка.
+              %p 
+                Престижное 
+                %a{href: "//maps.yandex.ru/?text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%9F%D0%BE%D0%B2%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%208%2F1%D1%811&sll=37.598591%2C55.753955&ll=37.598591%2C55.753955&spn=0.010482%2C0.003352&z=17&l=map", target: "_blank"} расположение 
+                Театрального Дома свидетельствует об&nbsp;особом статусе его владельцев. В&nbsp;десяти минутах пешком&nbsp;&mdash; Кремль, Храм Христа Спасителя, ул. Старый Арбат, Пушкинская площадь. Из&nbsp;окон открывается прекрасный вид на&nbsp;зелёный сквер Мерзляковского переулка и&nbsp;Поварскую улицу, где преобладает малоэтажная застройка.
                   
       %section.section.__full.__feedback#feedback{role: "region", "aria-label" => "Feedback"}
         .ctn
@@ -83,15 +86,16 @@
                 Мы&nbsp;перезвоним вам в&nbsp;удобное для вас время 
                 %br
                 и&nbsp;проконсультируем по&nbsp;всем вопросам
-            %form
+            %form{id: "feedback-form"}
               %div.m-b_1
                 %label.form-el.__label Имя
-                %input.form-el.__tx.__block{type: "text"}
+                %input.form-el.__tx.__block{type: "text", name: "data[name]"}
               %div.m-b_1
                 %label.form-el.__label Телефон
-                %input.form-el.__tx.__block.__phone{type: "text"}
+                %input.form-el.__tx.__block.__phone{type: "text", name: "data[phone]"}
               %div.m-b_3
                 %label.form-el.__label Удобное время
-                %input.form-el.__tx.__block{type: "text"}
+                %input.form-el.__tx.__block{type: "text", name: "data[time]"}
               %div.tx.__center
-                %input.form-el.__btn{type: "submit", value: "Отправить"}
+                %input{type: "hidden", name: "send"}
+                %a.form-el.__btn#feedback-form-submit{href: "#"} Отправить

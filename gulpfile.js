@@ -172,9 +172,14 @@ gulp.task('copy:files', function() {
   gulp.src([
     './favicon.ico',
     './humans.txt',
-    './robots.txt'
+    './robots.txt',
+    './mail.php'
   ])
     .pipe(gulp.dest('./build'));
+  gulp.src([
+    './lib/**/*'
+  ])
+    .pipe(gulp.dest('./build/lib'));
 });
 
 //
