@@ -18,7 +18,7 @@
           %article.block
             %header
               %h1.tx.__major.__upper.__center Премьера сезона
-            %hr.hr
+            %hr.hr.m-t_2.m-b_1
             %h3.tx.__major.__center.m-b_2
               &laquo;Театральный дом&raquo;
               %br
@@ -33,17 +33,26 @@
           %article.block.__border
             %header.block_h
               %h2.block_t Характеристики
-            %hr.hr
+            %hr.hr.m-t_1.m-b_2
             .cnt
               %p &laquo;Театральный дом&raquo; состоит из&nbsp;8&nbsp;секций, объединенных единым подземным паркингом. Этажность&nbsp;&mdash; от&nbsp;4&nbsp;до&nbsp;7.
               %p Верхние этажи занимают апартаменты с&nbsp;эксплуатируемой кровлей, где вы&nbsp;можете разбить свой личный садик и&nbsp;обустроить место для вечерних посиделок с&nbsp;семьей и&nbsp;друзьями. Более того, именно в&nbsp;этих квартирах предусмотрена установка камина, что только добавит вашему жилью дополнительный уют.
+              .m-b_2
+                .grid
+                  .grid-i.__grid-2>
+                    %p Всего апартаментов
+                    %p.alpha.tx.__major 129
+                  .grid-i.__grid-4>
+                    %p Площади апартаментов
+                    %p.alpha.tx.__major 67&mdash;260&nbsp;м
+              %p Имеется возможность объединения апартаментов по&nbsp;горизонтали, верхних этажей&nbsp;&mdash; по&nbsp;вертикали.              
 
       %section.section.__full.__equipment{role: "region", "aria-label" => "Equipment"}
         .ctn
           %article.block.__border
             %header.block_h
               %h2.block_t Оснащение
-            %hr.hr
+            %hr.hr.m-t_1.m-b_2
             .cnt
               %p Бесшумные лифты высокого класса с&nbsp;дизайнерской отделкой кабин.
               %p 
@@ -59,7 +68,7 @@
           %article.block.__border
             %header.block_h
               %h2.block_t Расположение
-            %hr.hr
+            %hr.hr.m-t_1.m-b_2
             .cnt
               %p Престижное расположение Театрального Дома свидетельствует об&nbsp;особом статусе его владельцев. В&nbsp;десяти минутах пешком&nbsp;&mdash; Кремль, Храм Христа Спасителя, ул. Старый Арбат, Пушкинская площадь. Из&nbsp;окон открывается прекрасный вид на&nbsp;зелёный сквер Мерзляковского переулка и&nbsp;Поварскую улицу, где преобладает малоэтажная застройка.
                   
@@ -68,9 +77,21 @@
           %article.block.__border
             %header.block_h
               %h2.block_t Заказать звонок
-            %hr.hr
-            .cnt.tx.__center
+            %hr.hr.m-t_1.m-b_2
+            .cnt.tx.__center.m-b_4
               %p 
                 Мы&nbsp;перезвоним вам в&nbsp;удобное для вас время 
                 %br
                 и&nbsp;проконсультируем по&nbsp;всем вопросам
+            %form
+              %div.m-b_1
+                %label.form-el.__label Имя
+                %input.form-el.__tx.__block{type: "text"}
+              %div.m-b_1
+                %label.form-el.__label Телефон
+                %input.form-el.__tx.__block.__phone{type: "text"}
+              %div.m-b_3
+                %label.form-el.__label Удобное время
+                %input.form-el.__tx.__block{type: "text"}
+              %div.tx.__center
+                %input.form-el.__btn{type: "submit", value: "Отправить"}

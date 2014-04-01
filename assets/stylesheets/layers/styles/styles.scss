@@ -92,6 +92,7 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
 }
 
 h1, .alpha {
+  letter-spacing: 3px;
   font-family: $font-700;
 }
 

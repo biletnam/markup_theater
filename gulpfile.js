@@ -40,6 +40,7 @@ var paths = {
       './assets/javascripts/vendor/doublehover.js',
       './assets/javascripts/vendor/owl.carousel.js',
       './assets/javascripts/vendor/jquery.arcticmodal.js',
+      './assets/javascripts/vendor/jquery.maskedinput.js',
       './assets/javascripts/vendor/imagesloaded.pkgd.js',
       './assets/javascripts/vendor/masonry.pkgd.js',
       './assets/javascripts/vendor/accounting.js',
