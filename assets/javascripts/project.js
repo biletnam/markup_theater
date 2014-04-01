@@ -8,6 +8,21 @@ $(function() {
   setSectionHeight();
 
   $('.form-el.__phone').mask('+7 (999) 999-9999');
+
+  //
+  // .. Page preloader
+  //
+  $('body').queryLoader2({
+      barColor: '#aa2f42',
+      backgroundColor: '#fffdeb',
+      percentage: true,
+      barHeight: 1,
+      completeAnimation: "grow",
+      minimumTime: 100
+      // onComplete: function() {
+      //   $('.screen__1').find('.screen_cnt').fadeIn();        
+      // }
+  });  
   
   //
   // .. Send email
@@ -18,19 +33,17 @@ $(function() {
       url:  '/mail.php',
       data: $('#feedback-form').serialize(),
       success: function(response) {
-        alert('Ок');
-        // $.arcticmodal({
-        //   type: 'ajax',
-        //   url: '/views/dialogs/_send_success.html'
-        // });
+        $.arcticmodal({
+          type: 'ajax',
+          url: '/data/dialogs/send_success.html'
+        });
         $('#feedback-form')[0].reset();
       },
       error: function() {
-        alert('Error');
-        // $.arcticmodal({
-        //   type: 'ajax',
-        //   url: '/views/dialogs/_send_error.html'
-        // });
+        $.arcticmodal({
+          type: 'ajax',
+          url: '/data/dialogs/send_error.html'
+        });
       }
     });
     return false;
