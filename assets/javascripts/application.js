@@ -187,7 +187,6 @@ $(function() {
   $(window).smartresize(function() {
 
     $('#header').stickyHeader();
-    $('#footer').stickyFooter();
 
   });
   
@@ -203,6 +202,5 @@ $(function() {
 $(window).load(function() {
 
   $('#header').stickyHeader();
-  $('#footer').stickyFooter();
 
 });

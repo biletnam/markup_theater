@@ -35,9 +35,27 @@
   @include prefixes(box-sizing, border-box);
   position: absolute;
   z-index: 999;
-  height: 400px;
-  background-color: #fff;
+  padding: 0 10px;
+  background-color: $base-bg;
+  box-shadow: 0 0 0 15px $base-bg;
+  &.__border {
+    @include prefixes(border-image, url(/assets/images/border.png) 40 16 repeat);
+    border-width: 40px 16px;
+    border-style: solid;
+  }
 }
+  .block_h {
+    text-align: center;
+  }
+    .block_t {
+      display: inline-block;
+      padding: 0 2rem;
+      height: 4rem;
+      border-radius: 4px;
+      background-color: $major-color;
+      color: #fff;
+      text-transform: uppercase;
+    }
 
 
 
@@ -48,17 +66,13 @@
 //****************************************************************************************************
 .section {
   position: relative;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   
-  &:not(:last-child) {
-    border-bottom: 5px solid #fff;
-  }
+  &:not(:last-child) {border-bottom: 5px solid $base-bg;}
   
-  &.__full {
-    min-height: 700px; 
-  }
+  &.__full {min-height: 700px;}
   
   &.__home {
     background-image: url(/assets/images/layer-01.jpg);
@@ -69,8 +83,8 @@
       @include prefixes(transform, translate(-50%, -50%));
       top: 0;
       left: 50%;
-      width: 500px;
-      padding: 20px;
+      padding: 50px;
+      width: 630px;
     } 
   }
   &.__characteristics {
@@ -80,7 +94,6 @@
       top: 0;
       left: 50%;
       width: 500px;
-      padding: 20px;
     } 
   }
   &.__equipment {
@@ -90,7 +103,6 @@
       top: 0;
       left: 50%;
       width: 500px;
-      padding: 20px;
     } 
   }
   &.__location {
@@ -101,7 +113,6 @@
       top: 50%;
       right: 0;
       width: 500px;
-      padding: 20px;
     } 
   }
   &.__feedback {
@@ -111,7 +122,6 @@
       top: 50%;
       left: 50%;
       width: 500px;
-      padding: 20px;
     } 
   }
 }
@@ -120,9 +130,14 @@
 
 //****************************************************************************************************
 //
-// .. FOOTER
+// .. ELEMENTS
 //
 //****************************************************************************************************
-.footer {
-
+//
+// .. HR
+//
+.hr {
+  padding: 2rem 0 3rem;
+  height: 20px;
+  background: url(/assets/images/hr.png) center no-repeat;
 }

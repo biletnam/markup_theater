@@ -3,7 +3,29 @@
 // .. FONTS
 //
 //****************************************************************************************************
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic);
+@font-face {
+  font-family: 'RomanovskyWebRegular';
+  src: url('/assets/fonts/RMN55__W.eot');
+  src:
+      url('/assets/fonts/RMN55__W.eot?#iefix') format('embedded-opentype'),
+      url('/assets/fonts/RMN55__W.woff') format('woff'),
+      url('/assets/fonts/RMN55__W.ttf') format('truetype'),
+      url('/assets/fonts/RMN55__W.svg#RomanovskyWeb-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RomanovskyWebBold';
+  src: url('/assets/fonts/RMN75__W.eot');
+  src:
+      url('/assets/fonts/RMN75__W.eot?#iefix') format('embedded-opentype'),
+      url('/assets/fonts/RMN75__W.woff') format('woff'),
+      url('/assets/fonts/RMN75__W.ttf') format('truetype'),
+      url('/assets/fonts/RMN75__W.svg#RomanovskyWeb-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 
@@ -75,35 +97,36 @@ $root-font-size-list: (62.5%, 57.5%, 52.5%); // .. desktop / tablet / phone
 //
 // .. Body
 //
-$base-bg: #fff;
-$base-color: #333;
-$base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+$base-bg: #fffdeb;
+$base-color: #000;
+$base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size-list: (1.4rem, 1.4rem, 1.4rem);
 $base-font-weight: 400;
-$base-line-height-list: (2rem, 2rem, 2rem);
+$base-line-height-list: (1.8rem, 1.8rem, 1.8rem);
 
 //
 // .. Headings
 //
-$h-font-family: $base-font-family;
+$h-font-family-400: "RomanovskyWebRegular", Helvetica, Arial, sans-serif;
+$h-font-family-700: "RomanovskyWebBold", Helvetica, Arial, sans-serif;
 
-$h1-font-size-list: (4rem, 4rem, 4rem);
-$h2-font-size-list: (3rem, 3rem, 3rem);
-$h3-font-size-list: (2.5rem, 2.5rem, 2.5rem);
+$h1-font-size-list: (4.8rem, 4.8rem, 4.8rem);
+$h2-font-size-list: (2.4rem, 2.4rem, 2.4rem);
+$h3-font-size-list: (3rem, 3rem, 3rem);
 $h4-font-size-list: (2rem, 2rem, 2rem);
 $h5-font-size-list: (inherit, inherit, inherit);
 $h6-font-size-list: (inherit, inherit, inherit);
 
-$h1-font-weight-list: (600, 600, 600);
-$h2-font-weight-list: (600, 600, 600);
-$h3-font-weight-list: (600, 600, 600);
+$h1-font-weight-list: (700, 700, 700);
+$h2-font-weight-list: (700, 700, 700);
+$h3-font-weight-list: (400, 400, 400);
 $h4-font-weight-list: (600, 600, 600);
 $h5-font-weight-list: (600, 600, 600);
 $h6-font-weight-list: (inherit, inherit, inherit);
 
-$h1-line-height-list: (4rem, 4rem, 4rem);
-$h2-line-height-list: (3.2rem, 3.2rem, 3.2rem);
-$h3-line-height-list: (2.8rem, 2.8rem, 2.8rem);
+$h1-line-height-list: (4.8rem, 4.8rem, 4.8rem);
+$h2-line-height-list: (4.2rem, 4.2rem, 4.2rem);
+$h3-line-height-list: (3.6rem, 3.6rem, 3.6rem);
 $h4-line-height-list: (2.4rem, 2.4rem, 2.4rem);
 $h5-line-height-list: (inherit, inherit, inherit);
 $h6-line-height-list: (inherit, inherit, inherit);
@@ -111,7 +134,7 @@ $h6-line-height-list: (inherit, inherit, inherit);
 //
 // .. Colors
 //
-$major-color: #333;
+$major-color: #aa2f42;
 $minor-color: #eee;
 $voice-color: #000;
 $muted-color: #ccc;
