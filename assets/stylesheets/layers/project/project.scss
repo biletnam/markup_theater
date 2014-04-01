@@ -44,6 +44,7 @@
   padding-left: 10px;
   background-color: $base-bg;
   text-align: center;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .10);
 }
   .logo_img {
     border-right:  1px solid $major-color;
@@ -72,7 +73,6 @@
 //
 //****************************************************************************************************
 .block {
-  // @include prefixes(box-sizing, border-box);
   position: absolute;
   z-index: 999;
   background-color: $base-bg;
@@ -108,7 +108,8 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  
+  background-repeat: no-repeat;
+
   &:not(:last-child) {border-bottom: 5px solid $base-bg;}
   
   &.__full {min-height: 700px;}
