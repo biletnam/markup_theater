@@ -167,6 +167,13 @@
       width: 320px;
     } 
   }
+  &.__contacts {
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background-color: $major-color;
+    a {color: inherit;}
+  }
 }
 
 
